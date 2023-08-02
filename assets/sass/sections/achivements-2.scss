@@ -1,0 +1,64 @@
+// Achivements Styles
+
+.achivements-2 {
+    width: 100%;
+    margin: 5.94rem 0 8.13rem;
+
+    &__header {
+        margin-bottom: 2.31rem;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-width: 36.4375rem;
+        font-size: 2.375rem;
+    }
+
+    &__btn {
+        @extend %btn;
+    }
+
+    &__content {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 20.6875rem;
+        gap: 1.94rem;
+    }
+}
+
+.achivement-2 {
+    border-radius: 0.8125rem;
+    border: 1px solid $gray2;
+    background: $white;
+    padding: 3rem 1.25rem;
+    background-size: 6.1875rem 6.3125rem;
+    background-repeat: no-repeat;
+    background-position-x: 1.25rem;
+
+    &:nth-child(1) {
+        background-image: url("../images/achivement-2-background-1.svg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../images/achivement-2-background-2.svg");
+    }
+    
+    &:nth-child(3) {
+        background-image: url("../images/achivement-2-background-3.svg");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../images/achivement-2-background-4.svg");
+    }
+
+    &__title {
+        color: $blue1;
+        font-size: 1.0625rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    &__subtitle {
+        color: $gray5;
+        font-size: 0.875rem;
+    }
+}

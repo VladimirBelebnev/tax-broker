@@ -1,0 +1,103 @@
+// Companies Styles
+
+.companies {
+    width: 100%;
+    margin: 7.31rem 0 3.12rem;
+
+    &__header {
+        justify-content: space-between;
+        margin-bottom: 2.12rem;
+    }
+
+    &__title {
+        max-width: 26.375rem;
+    }
+
+    &__slider-buttons {
+        gap: 0.87rem;
+    }
+
+    &__slider-btn {
+        width: 3.6875rem;
+        height: 3.6875rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.8125rem;
+        border: 1px solid $blue8;
+        background: $blue13;
+        
+        &::before {
+            content: "";
+            height: 1.5rem;
+            width: 1.5rem;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+
+        &_left {
+            &::before {
+                background-image: url("../images/arrow-left.svg");
+            }
+        }
+
+        &_right {
+            &::before {
+                background-image: url("../images/arrow-right.svg");
+            }
+        }
+    }
+
+    &__slider {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__slider-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1.88rem;
+    }
+}
+
+.company {
+    border-radius: 0.8125rem;
+    border: 1px solid $gray2;
+    background: $white;
+    width: 34.6875rem;
+    min-height: 18.5625rem;
+    padding: 2.56rem 2.06rem 1.62rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 1.1875rem;
+        font-weight: $bold;
+    }
+
+    &__section {
+        border-radius: 0.8125rem;
+        border: 1px solid $blue8;
+        background: $blue9;
+        width: 100%;
+        text-align: center;
+        min-height: 6.4375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        color: $blue1;
+        font-size: 0.9375rem;
+        font-weight: $medium;
+    }
+
+    &__btn {
+        @extend %btn;
+        border-radius: 0.8125rem;
+    }
+}

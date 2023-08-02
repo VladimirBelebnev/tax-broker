@@ -1,0 +1,103 @@
+// Header Styles
+
+.header {
+    width: 100%;
+    margin-top: 3.06rem;
+
+    &__container {
+        justify-content: space-between;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 2.74rem;
+    }
+
+    &__link-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.81rem;
+    }
+
+    &__link-item {
+        position: relative;
+    }
+
+    &__link {
+        color: $black;
+        font-size: 0.875rem;
+
+        &_drop-down {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.38rem;
+
+            &::after {
+                content: "";
+                width: 0.46075rem;
+                height: 0.23944rem;
+                display: inline-block;
+                background-image: url("../images/drop-down-icon.svg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__company-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-style: normal;
+        margin-right: 1.69rem; 
+    }
+
+    &__phone {
+        font-size: 1.25rem;
+        font-weight: $semibold;
+    }
+
+    &__work-time {
+        font-size: 0.75rem;
+        font-weight: $light;
+    }
+
+    &__soc-links {
+        gap: 0.5rem;
+        margin-right: 1.19rem;
+    }
+
+    &__soc-link {
+
+        &_whatsapp {
+            @include soc-button(2.31306rem, 2.31306rem, "../images/whatsapp-color-icon.svg");
+        }
+
+        &_telegram {
+            @include soc-button(2.31306rem, 2.31306rem, "../images/telegram-color-icon.svg");
+        }
+    }
+
+    &__btn {
+        @extend %btn;
+        min-width: 10.3125rem;
+        height: 3.0625rem;
+        gap: 0.44rem;
+
+        &::before {
+            content: "";
+            width: 1.1875rem;
+            height: 1.1875rem;
+            display: inline-block;
+            background-image: url("../images/calculator-icon.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__drop-down {
+        right: -1rem;
+        top: calc(100% + 0.81rem);
+        transition: .5s;
+    }
+}

@@ -1,0 +1,49 @@
+// Imports Files
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+// Zeroing Out Files
+
+@import "ZeroingOut.scss";
+
+// Variables
+
+@import "variables.scss";
+
+// Started Styles Files
+
+@import "startedStyles.scss";
+
+// General Classes Files
+
+@import "generalClasses.scss";
+
+// Sections Files
+
+@import "sections/header.scss";
+@import "sections/home.scss";
+@import "sections/about.scss";
+@import "sections/achivements-1.scss";
+@import "sections/achivements-2.scss";
+@import "sections/additional-services.scss";
+@import "sections/calculator-1.scss";
+@import "sections/calculator-2.scss";
+@import "sections/companies.scss";
+@import "sections/companies.scss";
+@import "sections/consultate.scss";
+@import "sections/contacts.scss";
+@import "sections/develop-slider.scss";
+@import "sections/items-info.scss";
+@import "sections/map.scss";
+@import "sections/packets.scss";
+@import "sections/price.scss";
+@import "sections/register-info.scss";
+@import "sections/saving-taxes.scss";
+@import "sections/services.scss";
+@import "sections/services-2.scss";
+@import "sections/services-3.scss";
+@import "sections/footer.scss";
+
+// Adaptive Files
+
+@import "media.scss";

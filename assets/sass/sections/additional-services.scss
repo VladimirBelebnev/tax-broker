@@ -1,0 +1,44 @@
+// Additional Services Styles
+
+.additional-services {
+    width: 100%;
+    margin: 8.13rem 0;
+
+    &__header {
+        margin-bottom: 2.5rem;
+    }
+
+    &__title {
+        max-width: 40.375rem;
+    }
+
+    &__info-item {
+        position: relative;
+        margin-left: 14px;
+
+        &::before {
+            content: "";
+            height: 3px;
+            min-width: 3px;
+            background: $gray5;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: -10px;
+        }
+    }
+
+    &__info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 53.875rem;
+    }
+
+    &__info-text {
+        color: $darkBlack;
+        font-size: 1.0625rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.01063rem;
+    }
+}

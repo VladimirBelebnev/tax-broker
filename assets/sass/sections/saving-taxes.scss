@@ -1,0 +1,68 @@
+// Saving-taxes Styles
+
+.saving-taxes {
+    width: 100%;
+    margin-top: 4.4rem;
+
+    &__section {
+        
+        &:last-child {
+            position: relative;
+            top: 3.9375rem;
+        }
+    }
+
+    &__container {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3.25rem;
+    }
+
+    &__img {
+        min-width: 27.1875rem;
+    }
+
+    &__title {
+        margin-bottom: 0.31rem;
+    }
+
+    &__subtitle {
+        color: $gray5;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+
+    &__promotion-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__promotion {
+        margin-bottom: 1rem;
+        @extend %btn;
+        width: 19.3125rem;
+        border-radius: 0.8125rem;
+        text-align: left;
+        border: 1px solid $blue8;
+        background: $blue9;
+        color: $blue1;
+        gap: 0.69rem;
+        padding: 0 2.75rem;
+
+        &::before {
+            content: "";
+            height: 1.4375rem;
+            min-width: 1.4375rem;
+            background-image: url("../images/promotion-icon.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+    }
+
+    &__btn {
+        @extend %btn;
+        width: 19.3125rem;
+        border-radius: 0.8125rem;
+    }
+}

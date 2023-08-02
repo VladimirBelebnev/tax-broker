@@ -1,0 +1,121 @@
+// Contacts Styles
+
+.contacts {
+    width: 100%;
+    margin: 1.94rem 0 3.06rem;
+
+    &__content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        border-radius: 1.25rem;
+        background: #F6F8FC;
+        padding: 3rem 6.2rem;
+        gap: 12.9rem;
+    }
+
+    &__title {
+        font-size: 2.875rem;
+        font-weight: $semibold;
+        margin-bottom: 2.5rem;
+    }
+
+    &__company-info {
+        font-style: normal;
+        margin-bottom: 3.63rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.87rem;
+    }
+
+    &__item {
+
+        color: $gray5;
+        font-size: 1.25rem;
+        font-weight: $medium;
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+
+        &_address {
+
+            &::before {
+                content: "";
+                width: 2.75rem;
+                height: 2.75rem;
+                display: inline-block;
+                background-image: url("../images/map-icon.svg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &_phone {
+            font-weight: $semibold;
+            display: inline-block;
+        }
+
+        &_email {
+
+            &::before {
+                content: "";
+                width: 2.75rem;
+                height: 2.75rem;
+                display: inline-block;
+                background-image: url("../images/email-icon.svg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__item-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &_phone::before {
+            content: "";
+            width: 2.75rem;
+            height: 2.75rem;
+            display: inline-block;
+            background-image: url("../images/phone-icon.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__time {
+        color: $gray5;
+        font-size: 0.75rem;
+        font-weight: $light;
+    }
+
+    &__links {
+        gap: 0.69rem;
+        justify-content: flex-start;
+        margin-top: 2.75rem;
+    }
+
+    &__btn {
+        @extend %btn;
+        background: $white;
+        color: $blue1;
+        font-size: 0.9375rem;
+        font-weight: $medium;
+        min-width: 15.875rem;
+        height: 3.1875rem;
+        border-radius: 0.625rem;
+        border: 1px solid $blue3;
+    }
+
+    &__link-btn {
+
+        &_whatsapp {
+            @include soc-button(3.1875rem, 3.1875rem, "../images/whatsapp-color-icon.svg");
+        }
+
+        &_telegram {
+            @include soc-button(3.1875rem, 3.1875rem, "../images/telegram-color-icon.svg");
+        }
+    }
+}

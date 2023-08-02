@@ -1,0 +1,118 @@
+// Services
+
+.services {
+    width: 100%;
+    padding: 6.19rem 0;
+
+    &__header {
+        text-align: center;
+        margin-bottom: 2.94rem;
+    }
+
+    &__price-info {
+        background: $blue1;
+        border-radius: 1.25rem;
+        padding: 1.87rem 1.87rem 1.94rem 2.94rem;
+        color: $white;
+        display: grid;
+        grid-template-columns: 1fr 21.5625rem;
+        gap: 3.69rem;
+        margin-bottom: 2.69rem;
+    }
+
+    &__price-info-section {
+
+        &_pay {
+            border-radius: 0.625rem;
+            border: 1px solid $blue3;
+            background: $blue2;
+            padding: 1rem;
+        }
+    }
+
+    &__price-info-title {
+        font-size: 1.75rem;
+        font-weight: $bold;
+        margin-bottom: 2.13rem;
+    }
+
+    &__price-info-row {
+        display: flex;
+        gap: 2.69rem;
+    }
+
+    &__price-info-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__price-info-item {
+        position: relative;
+        margin-left: 14px;
+
+        &::before {
+            content: "";
+            height: 3px;
+            min-width: 3px;
+            background: $white;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: -10px;
+        }
+    }
+
+    &__price-info-text {
+        font-size: 0.9375rem;
+
+        &_bold {
+            font-weight: $bold;
+        }
+    }
+
+    &__price-info-promotion-wrapper {
+        width: 100%;
+        padding: 1.19rem 0;
+        border: 1px solid $blue4;
+        background: $blue5;
+        text-align: center;
+        border-radius: 0.625rem;
+        margin-bottom: 1.62rem;
+    }
+
+    &__price-info-promotion {
+        font-size: 1.25rem;
+
+        &_bold {
+            font-weight: $semibold;
+        }
+    }
+
+    &__price-info-price {
+        text-align: center;
+        margin-bottom: 1.87rem;
+    }
+
+    &__price-info-time {
+        font-size: 0.8125rem;
+        font-weight: $light;
+        opacity: 0.5;
+    }
+
+    &__price-info-bold-text {
+        font-size: 2.125rem;
+        font-weight: $bold;
+    }
+
+    &__price-info-btn {
+        @extend %btn;
+        background: $white;
+        color: $blue1;
+        font-size: 0.9375rem;
+        font-weight: $medium;
+        width: 100%;
+        height: 3.1875rem;
+        border-radius: 0.63rem;
+    }
+}

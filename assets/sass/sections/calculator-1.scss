@@ -1,0 +1,166 @@
+// Calculator-1 Styles
+
+.calculator-1 {
+    width: 100%;
+    margin: 7.5rem 0;
+
+    &__header {
+        margin-bottom: 2.94rem;
+        text-align: center;
+    }
+    &__row {
+
+        &:first-child {
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 1.31rem;
+            gap: 1.87rem;
+        }
+
+        &:last-child {
+            grid-template-columns: 1fr 22.5rem;
+            gap: 1.87rem;
+            align-items: center;
+        }
+    }
+
+    &__input-title {
+        color: $gray5;
+        font-size: 0.9375rem;
+        margin-bottom: 1.13rem;
+    }
+
+    &__input {
+        border-radius: 0.8125rem;
+        border: 1px solid $gray2;
+        background: $white;
+        padding: 1.35rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0.46075rem;
+            height: 0.23944rem;
+            background-image: url("../images/drop-down-icon.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__input-text {
+        color: $gray5;
+        font-size: 0.9375rem;
+    }
+
+    &__range-section {
+
+        &:first-child {
+            margin-bottom: 3.69rem;
+        }
+    }
+
+    &__range-title {
+        color: $gray5;
+        font-size: 0.9375rem;
+        margin-bottom: 1.12rem;
+    }
+
+    &__range-input {
+        width: 100%;
+    }
+
+    &__range-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+
+    &__range-number {
+        color: $gray5;
+        font-size: 0.9375rem;
+    }
+
+    &__price {
+        margin-top: 3.75rem;
+    }
+
+    &__price-title {
+        font-size: 1.5rem;
+        font-weight: $medium;
+        margin-bottom: 0.19rem;
+
+        &_marked {
+            color: $blue1;
+            font-weight: $extrabold;
+            background: none;
+        }
+    }
+
+    &__price-subtitle {
+        font-size: 0.875rem;
+    }
+
+    &__form {
+        border-radius: 1.25rem;
+        background: $blue1;
+        color: $white;
+        padding: 1.6rem 0.69rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__form-title {
+        font-size: 1.25rem;
+        font-weight: $bold;
+        margin-bottom: 1.94rem;
+    }
+
+    &__form-input {
+        width: calc(100% - 1.38rem);
+        margin-bottom: 0.81rem;
+        border-radius: 0.8125rem;
+        border: 1px solid $gray2;
+        padding: 1.35rem 1.5rem;
+        background: $white;
+        color: $gray5;
+        font-size: 0.9375rem;
+
+        &::placeholder {
+            color: $gray5;
+            font-size: 0.9375rem;
+            opacity: 0.5;
+        }
+    }
+
+    &__btn {
+        width: calc(100% - 1.38rem);
+        @extend %btn;
+        background: $white;
+        height: 3.8125rem;
+        border-radius: 0.63rem;
+        color: $blue1;
+        font-size: 0.9375rem;
+        margin-bottom: 1.19rem;
+    }
+
+    &__description {
+        font-size: 0.75rem;
+    }
+
+    &__description-link {
+        text-decoration: underline;
+    }
+
+    &__drop-down {
+        width: 100%;
+        padding: 0.5rem 1.38rem;
+        transition: 0.5s;
+    }
+}
