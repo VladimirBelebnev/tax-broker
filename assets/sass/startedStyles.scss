@@ -20,6 +20,18 @@ body {
 .main {
     min-height: 100vh;
     background: $white;
+
+    &_all-blocks {
+
+        & > * {
+            margin: 5rem 0 !important;
+        }
+
+        .services {
+            padding: 0;
+        }
+
+    }
 }
 
 svg, img, video {

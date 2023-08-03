@@ -63,13 +63,3 @@ packetTabButtons.forEach(item => {
     });
 
 });
-
-inputs.forEach(item => {
-    noUiSlider.create(item, {
-        start: [10],
-        range: {
-            'min': [10],
-            'max': [100]
-        }
-    });
-});

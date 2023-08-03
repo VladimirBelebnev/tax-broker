@@ -1,0 +1,25 @@
+.price {
+    width: 100%;
+
+    &__content {
+        border-radius: 1.25rem;
+        background: $gray1;
+        padding: 2.69rem 3.06rem 2.44rem;
+    }
+
+    &__header {
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 4.87rem;
+    }
+
+    &__items {
+        margin-bottom: 1.38rem;
+    }
+
+    &__description {
+        text-align: center;
+    }
+}

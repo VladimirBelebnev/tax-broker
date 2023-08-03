@@ -57,8 +57,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    &__title {
+        color: $blue1;
+        font-size: 1.25rem;
+        font-weight: $extrabold;
+    }
 
     &__text {
         font-size: 1.25rem;
+    }
+
+    &_text-mini {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.37rem 2.25rem;
+
+        .consultate-item__text {
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
     }
 }

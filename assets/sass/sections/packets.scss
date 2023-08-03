@@ -3,6 +3,10 @@
 .packets {
     width: 100%;
 
+    &_margin {
+        margin-top: 3.31rem;
+    }
+
     &__content {
         width: 100%;
         border-radius: 1.25rem;
@@ -34,8 +38,8 @@
         border-radius: 0.8125rem;
 
         &_active {  
-            background: $blue1;
-            color: $white;
+            background: $blue1 !important;
+            color: $white !important;
         }
     }
 
@@ -43,6 +47,7 @@
         flex-direction: column;
         align-items: start;
         gap: 1.19rem;
+        transition: 0.5s;
     }
 
     &__form {
@@ -106,6 +111,62 @@
         &_link {
             text-decoration: underline;
         }
+    }
+
+    &__additional-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.38rem;
+        margin-top: 1.13rem;
+    }
+
+    &__additional-item {
+        border-radius: 0.8125rem;
+        border: 1px solid $gray4;
+        background: $white;
+        padding: 0.75rem 1.06rem 0.75rem 1.94rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__additional-title {
+        color: $gray5;
+        font-size: 1.0625rem;
+        font-weight: $semibold;
+    }
+
+    &__additional-price {
+        border-radius: 0.8125rem;
+        border: 1px solid $blue8;
+        background: $blue14;
+        padding: 1rem 1.5rem;
+        min-width: 8.5625rem;
+        text-align: center;
+        color: $blue1;
+        font-size: 1.125rem;
+        font-weight: $medium;
+    }
+}
+
+.packets-2 {
+
+    &__header {
+        border-radius: 1.25rem;
+        background: #ECF0F8;
+        padding: 1.55rem 2rem;
+    }
+
+    &__button-list {
+        background: none;
+        padding: 0;
+        gap: 0.87rem;
+    }
+
+    &__button {
+        height: 2.9375rem;
+        min-width: 9.75rem;
+        background: $white;
+        color: $blue1;
     }
 }
 
@@ -214,4 +275,60 @@
         border-radius: 0.8125rem;
     }
 
+    &__free-text-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__free-text {
+        color: $blue1;
+        font-size: 2.125rem;
+    }
+
+    &__info-list-description {
+        margin-bottom: 1rem;
+    }
+
+}
+
+.packet-2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3.44rem;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: $bold;
+        margin-bottom: 1.38rem;
+    }
+
+    &__list-description {
+        font-size: 0.875rem;
+    }
+
+    &__list-item {
+        position: relative;
+        margin-left: 14px;
+
+        &::before {
+            content: "";
+            height: 3px;
+            min-width: 3px;
+            background: $gray5;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: -10px;
+        }
+    }
+
+    &__list-text {
+        font-size: 0.875rem;
+    }
+
+    &__img {
+    }
 }
