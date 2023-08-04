@@ -5,6 +5,10 @@
     &__content {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.9rem;
+
+        &_two-columns {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__column {
