@@ -5,6 +5,13 @@
     margin-top: 3.06rem;
     margin-bottom: 5rem;
 
+    &__section {
+
+        &_mobile {
+            display: none;
+        }
+    }
+
     &__container {
         justify-content: space-between;
     }
@@ -100,5 +107,20 @@
         right: -1rem;
         top: calc(100% + 0.81rem);
         transition: .5s;
+    }
+
+    &__open-modal-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.125rem;
+        height: 1.375rem;
+        background-image: url("../images/mobile-modal-btn-icon.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    &__calculator-btn {
+        @extend %calculator-btn;
     }
 }

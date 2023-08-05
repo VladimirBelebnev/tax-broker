@@ -13,6 +13,7 @@
     &__header {
         margin-bottom: 2.31rem;
         justify-content: space-between;
+        gap: 1rem;
     }
 
     &__header-section {
@@ -32,6 +33,14 @@
     &__content {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.88rem;
+    }
+
+    &__footer {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
     }
 }
 

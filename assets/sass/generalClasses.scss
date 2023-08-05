@@ -15,6 +15,10 @@
 
 .logo {
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &_white {
         .logo__link {
             background-image: url("../images/logo-white.svg");
@@ -28,6 +32,7 @@
         background-image: url("../images/logo.svg");
         background-size: 100%;
         background-repeat: no-repeat;
+        background-position: center;
     }
 
 }
@@ -373,5 +378,155 @@
         &_link {
             text-decoration: underline;
         }
+    }
+}
+
+%calculator-btn {
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 0.25rem;
+    border: 1px solid $gray3;
+    background: $blue1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 1.1875rem;
+        height: 1.1875rem;
+        display: inline-block;
+        background-image: url("../images/calculator-icon.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.header-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    &__wrapper {
+        width: 100%;
+        height: 100vh;
+        background: $black;
+        color: $white;
+        padding-top: 1.5rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4.74rem;
+
+        .logo__link {
+            width: 7.875rem;
+        }
+    }
+
+    &__skip-btn {
+        display: inline-flex;
+        width: 1.67938rem;
+        height: 1.67938rem;
+        background-image: url("../images/skip-btn-2.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    &__calculator-btn {
+        @extend %calculator-btn;
+    }
+
+    &__content {
+        margin-bottom: 2.77rem;
+    }
+
+    &__link-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.81rem;
+    }
+
+    &__link {
+        font-size: 1.375rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.81rem;
+
+        &:hover {
+            color: $blue1;
+            opacity: 1;
+        }
+
+        &_drop-down {
+            &::after {
+                content: "";
+                width: 0.79581rem;
+                height: 0.41356rem;
+                display: inline-block;
+                background-image: url("../images/drop-down-icon-2.svg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__drop-down-list-wrapper {
+        margin: 1.07rem 0 0 0.7rem;
+    }
+
+    &__drop-down-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.87rem;
+    }
+
+    &__drop-down-link {
+        font-size: 1.125rem;
+        opacity: 0.7;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    &__soc-links {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    &__soc-link {
+        display: inline-block;
+
+        &_whatsapp {
+            @include soc-button(3.88925rem, 3.88925rem, "../images/whatsapp-white-icon-2.svg");
+        }
+
+        &_telegram {
+            @include soc-button(3.88925rem, 3.88925rem, "../images/telegram-white-icon-2.svg");
+        }
+    }
+
+    &__company-info {
+        font-style: normal;
+    }
+
+    &__phone {
+        font-size: 1.54113rem;
+        font-weight: $semibold;
+    }
+
+    &__address {
+        font-size: 0.92469rem;
+        font-weight: $light;
     }
 }

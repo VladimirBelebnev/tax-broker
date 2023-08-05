@@ -29,6 +29,7 @@
             border-radius: 1.25rem;
             position: relative;
             overflow: hidden;
+            z-index: 1;
 
             &::before {
                 content: "";
@@ -77,6 +78,7 @@
         gap: 0.69rem;
         justify-content: flex-start;
         margin-top: 2.75rem;
+        flex-wrap: wrap;
     }
 
     &__btn {

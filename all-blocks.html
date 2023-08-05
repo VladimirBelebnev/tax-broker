@@ -16,13 +16,17 @@
         <header class="header">
             <div class="container flex header__container">
 
+                <section class="header__section header__section_mobile">
+                    <button class="header__open-modal-btn"></button>
+                </section>
+
                 <section class="header__section">
                     <div class="logo">
                         <a href="#" class="logo__link"></a>
                     </div>
                 </section>
 
-                <section class="header__section">
+                <section class="header__section header__section_desktop">
                     <nav class="header__nav">
                         <ul class="header__link-list">
                             <li class="header__link-item">
@@ -70,7 +74,7 @@
                     </nav>
                 </section>
 
-                <section class="flex header__section">
+                <section class="flex header__section header__section_desktop">
 
                     <address class="header__company-info">
                         <a href="tel:+79000000000" class="header__phone">
@@ -90,6 +94,10 @@
                         Калькулятор
                     </a>
 
+                </section>
+
+                <section class="header__section header__section_mobile">
+                    <button class="header__calculator-btn"></button>
                 </section>
                 
             </div>
@@ -118,34 +126,40 @@
 
                             <article class="info-item">
                                 <img src="assets/images/document-icon.svg" alt="" class="info-item__img">
-                                <h3 class="info-item__title">
-                                    1 месяц бесплатно!
-                                </h3>
-                                <p class="info-item__subtitle">
-                                    1 месяц обслуживания 
-                                    в подарок. 
-                                    Для ИП и ООО
-                                </p>
+                                <div class="info-item__text-wrapper">
+                                    <h3 class="info-item__title">
+                                        1 месяц бесплатно!
+                                    </h3>
+                                    <p class="info-item__subtitle">
+                                        1 месяц обслуживания 
+                                        в подарок. 
+                                        Для ИП и ООО
+                                    </p>
+                                </div>
                             </article>
 
                             <article class="info-item">
                                 <img src="assets/images/document-icon.svg" alt="" class="info-item__img">
-                                <h3 class="info-item__title">
-                                    Сократим нагрузку
-                                </h3>
-                                <p class="info-item__subtitle">
-                                    Сократим Вашу налоговую нагрузку до 45% уже в первый месяц
-                                </p>
+                                <div class="info-item__text-wrapper">
+                                    <h3 class="info-item__title">
+                                        Сократим нагрузку
+                                    </h3>
+                                    <p class="info-item__subtitle">
+                                        Сократим Вашу налоговую нагрузку до 45% уже в первый месяц
+                                    </p>
+                                </div>
                             </article>
 
                             <article class="info-item">
                                 <img src="assets/images/document-icon.svg" alt="" class="info-item__img">
-                                <h3 class="info-item__title">
-                                    ЭП для ФНС в подарок
-                                </h3>
-                                <p class="info-item__subtitle">
-                                    Выпуск электронной подписи для отчетности в ФНС в подарок
-                                </p>
+                                <div class="info-item__text-wrapper">
+                                    <h3 class="info-item__title">
+                                        ЭП для ФНС в подарок
+                                    </h3>
+                                    <p class="info-item__subtitle">
+                                        Выпуск электронной подписи для отчетности в ФНС в подарок
+                                    </p>
+                                </div>
                             </article>
 
                         </div>
@@ -237,6 +251,12 @@
                             </article>
 
                         </section>
+
+                        <footer class="achivements-1__footer">
+                            <a href="#" class="achivements-1__btn">
+                                Оставить заявку
+                            </a>
+                        </footer>
                     </div>
 
                 </div>
@@ -4510,6 +4530,135 @@
         <!-- Main End -->
 
         <section class="modal-windows">
+
+            <!-- Header Modal -->
+
+            <div class="hidden header-modal">
+
+                <div class="header-modal__wrapper">
+
+                    <div class="container">
+
+                        <header class="header-modal__header">
+                            <button class="header-modal__skip-btn"></button>
+
+                            <div class="logo logo_white">
+                                <a href="#" class="logo__link"></a>
+                            </div>
+
+                            <button class="header-modal__calculator-btn"></button>
+                        </header>
+
+                        <section class="header-modal__content">
+                            <ul class="header-modal__link-list">
+                                <li class="header-modal__link-item">
+                                    <a href="#" class="header-modal__link header-modal__link_drop-down">
+                                        Бухгалтерский учет
+                                    </a>
+
+                                    <div class="header-modal__drop-down-list-wrapper">
+                                        <ul class="header-modal__drop-down-list">
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header-modal__link-item">
+                                    <a href="#" class="header-modal__link header-modal__link_drop-down">
+                                        Услуги для физ.лиц
+                                    </a>
+                                    
+
+                                    <div class="header-modal__drop-down-list-wrapper hidden">
+                                        <ul class="header-modal__drop-down-list">
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header-modal__link-item">
+                                    <a href="#" class="header-modal__link header-modal__link_drop-down">
+                                        Юридические услуги
+                                    </a>
+                                    
+
+                                    <div class="header-modal__drop-down-list-wrapper hidden">
+                                        <ul class="header-modal__drop-down-list">
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                            <li class="header-modal__drop-down-item">
+                                                <a href="#" class="header-modal__drop-down-link">
+                                                    Услуги для физ.лиц
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header-modal__link-item">
+                                    <a href="#" class="header-modal__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <footer class="header-modal__footer">
+                            <div class="header-modal__soc-links">
+                                <a href="#" class="header-modal__soc-link header-modal__soc-link_whatsapp"></a>
+                                <a href="#" class="header-modal__soc-link header-modal__soc-link_telegram"></a>
+                            </div>
+
+                            <address class="header-modal__company-info">
+                                <a href="#" class="header-modal__phone">
+                                    8 900 000 00 00
+                                </a>
+                                <p class="header-modal__address">
+                                    пн-сб с 8:00 до 19:00
+                                </p>
+                            </address>
+                        </footer>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Header Modal End -->
             
         </section>
 
