@@ -12,11 +12,14 @@
         border-radius: 1.25rem;
         background: $gray1;
         padding: 2.06rem 2.31rem 2.31rem;
+        overflow: hidden;
     }
 
     &__header {
         justify-content: space-between;
         margin-bottom: 2.56rem;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     &__title {
@@ -36,6 +39,7 @@
         background: none;
         padding: 0.5rem 1.31rem;
         border-radius: 0.8125rem;
+        white-space: nowrap;
 
         &_active {  
             background: $blue1 !important;
@@ -127,6 +131,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 0.5rem;
     }
 
     &__additional-title {
@@ -179,12 +184,13 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 2rem;
 
     &__column {
 
         &:last-child {
-            width: 21.5625rem;
-            height: 15.75rem;
+            min-width: 21.5625rem;
+            min-height: 15.75rem;
             border-radius: 0.625rem;
             background: $gray1;
             padding: 0.87rem 1.13rem;
@@ -280,6 +286,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        margin-top: 4.75rem;
     }
 
     &__free-text {

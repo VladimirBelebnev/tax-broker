@@ -4,13 +4,21 @@
     width: 100%;
     margin: 1.94rem 0 3.06rem;
 
+    &__section {
+
+        &:last-child {
+            max-width: 22.5rem;
+        }
+    }
+
     &__content {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+        // grid-template-columns: repeat(2, 1fr);
         border-radius: 1.25rem;
         background: #F6F8FC;
         padding: 3rem 6.2rem;
-        gap: 12.9rem;
+        // gap: 12.9rem;
+        justify-content: space-between;
+        gap: 3rem;
     }
 
     &__title {

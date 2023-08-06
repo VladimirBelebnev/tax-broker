@@ -28,6 +28,13 @@
             grid-template-rows: auto;
         }
     }
+    
+    &__footer {
+        width: 100%;
+        display: none;
+        justify-content: center;
+        margin-top: 2rem;
+    }
 }
 
 .achivement-2 {

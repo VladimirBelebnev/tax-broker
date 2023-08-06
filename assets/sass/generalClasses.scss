@@ -38,8 +38,8 @@
 }
 
 @mixin soc-button($width, $height, $url) {
-    width: $width;
-    height: $height;
+    min-width: $width;
+    min-height: $height;
     background-size: 100%;
     background-repeat: no-repeat;
     background-image: url($url);
@@ -101,6 +101,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
     }

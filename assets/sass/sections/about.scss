@@ -58,5 +58,15 @@
     &__btn {
         @extend %btn;
         margin-top: 0.63rem;
+
+        &_mobile {
+            display: none;
+            margin-top: 2rem;
+        }
+    }
+
+    &__mobile-content {
+        margin-bottom: 1.25rem;
+        display: none;
     }
 }

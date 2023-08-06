@@ -16,13 +16,17 @@
         <header class="header">
             <div class="container flex header__container">
 
+                <section class="header__section header__section_mobile">
+                    <button class="header__open-modal-btn"></button>
+                </section>
+
                 <section class="header__section">
                     <div class="logo">
                         <a href="#" class="logo__link"></a>
                     </div>
                 </section>
 
-                <section class="header__section">
+                <section class="header__section header__section_desktop">
                     <nav class="header__nav">
                         <ul class="header__link-list">
                             <li class="header__link-item">
@@ -70,7 +74,7 @@
                     </nav>
                 </section>
 
-                <section class="flex header__section">
+                <section class="flex header__section header__section_desktop">
 
                     <address class="header__company-info">
                         <a href="tel:+79000000000" class="header__phone">
@@ -90,6 +94,10 @@
                         Калькулятор
                     </a>
 
+                </section>
+
+                <section class="header__section header__section_mobile">
+                    <button class="header__calculator-btn"></button>
                 </section>
                 
             </div>
@@ -118,34 +126,40 @@
 
                             <article class="info-item">
                                 <img src="assets/images/document-icon.svg" alt="" class="info-item__img">
-                                <h3 class="info-item__title">
-                                    1 месяц бесплатно!
-                                </h3>
-                                <p class="info-item__subtitle">
-                                    1 месяц обслуживания 
-                                    в подарок. 
-                                    Для ИП и ООО
-                                </p>
+                                <div class="info-item__text-wrapper">
+                                    <h3 class="info-item__title">
+                                        1 месяц бесплатно!
+                                    </h3>
+                                    <p class="info-item__subtitle">
+                                        1 месяц обслуживания 
+                                        в подарок. 
+                                        Для ИП и ООО
+                                    </p>
+                                </div>
                             </article>
 
                             <article class="info-item">
                                 <img src="assets/images/document-icon.svg" alt="" class="info-item__img">
-                                <h3 class="info-item__title">
-                                    Сократим нагрузку
-                                </h3>
-                                <p class="info-item__subtitle">
-                                    Сократим Вашу налоговую нагрузку до 45% уже в первый месяц
-                                </p>
+                                <div class="info-item__text-wrapper">
+                                    <h3 class="info-item__title">
+                                        Сократим нагрузку
+                                    </h3>
+                                    <p class="info-item__subtitle">
+                                        Сократим Вашу налоговую нагрузку до 45% уже в первый месяц
+                                    </p>
+                                </div>
                             </article>
 
                             <article class="info-item">
                                 <img src="assets/images/document-icon.svg" alt="" class="info-item__img">
-                                <h3 class="info-item__title">
-                                    ЭП для ФНС в подарок
-                                </h3>
-                                <p class="info-item__subtitle">
-                                    Выпуск электронной подписи для отчетности в ФНС в подарок
-                                </p>
+                                <div class="info-item__text-wrapper">
+                                    <h3 class="info-item__title">
+                                        ЭП для ФНС в подарок
+                                    </h3>
+                                    <p class="info-item__subtitle">
+                                        Выпуск электронной подписи для отчетности в ФНС в подарок
+                                    </p>
+                                </div>
                             </article>
 
                         </div>
@@ -595,6 +609,12 @@
                         </article>
 
                     </section>
+
+                    <footer class="consultate__footer">
+                        <a href="#" class="consultate__btn consultate__btn_mobile">
+                            Заказать аудит
+                        </a>
+                    </footer>
 
                 </div>
             </section>
@@ -2161,6 +2181,13 @@
                         </div>
                     </section>
 
+                    <footer class="companies__footer">
+                        <div class="flex companies__slider-buttons companies__slider-buttons_mobile">
+                            <button class="companies__slider-btn companies__slider-btn_left"></button>
+                            <button class="companies__slider-btn companies__slider-btn_right"></button>
+                        </div>
+                    </footer>
+
                 </div>
             </section>
 
@@ -2179,57 +2206,85 @@
         <footer class="footer">
             <div class="container">
 
-                <section class="flex footer__row">
+                <div class="footer__row-wrapper">
 
-                    <section class="footer__column">
-                        <nav class="footer__nav">
-                            <ul class="footer__link-list">
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Главная
-                                    </a>
-                                </li>
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Калькулятор
-                                    </a>
-                                </li>
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Пакеты
-                                    </a>
-                                </li>
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Услуги
-                                    </a>
-                                </li>
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Название услуги
-                                    </a>
-                                </li>
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Название услуги
-                                    </a>
-                                </li>
-                                <li class="footer__link-item">
-                                    <a href="#" class="footer__link">
-                                        Название услуги
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <section class="flex footer__row">
+
+                        <section class="footer__column footer__column_mobile">
+                            <button class="footer__open-modal-btn"></button>
+                        </section>
+
+                        <section class="footer__column footer__column_desktop">
+                            <nav class="footer__nav">
+                                <ul class="footer__link-list">
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Калькулятор
+                                        </a>
+                                    </li>
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Пакеты
+                                        </a>
+                                    </li>
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Услуги
+                                        </a>
+                                    </li>
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Название услуги
+                                        </a>
+                                    </li>
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Название услуги
+                                        </a>
+                                    </li>
+                                    <li class="footer__link-item">
+                                        <a href="#" class="footer__link">
+                                            Название услуги
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+
+                        <section class="footer__column footer__column_logo">
+                            <div class="logo logo_white">
+                                <a href="#" class="logo__link"></a>
+                            </div>
+                        </section>
+
+                        <section class="flex footer__column footer__column_desktop">
+                            <address class="footer__company-info">
+                                <a href="tel:+79000000000" class="footer__phone">
+                                    8 900 000 00 00
+                                </a>
+                                <p class="footer__time">
+                                    пн-сб с 8:00 до 19:00
+                                </p>
+                            </address>
+
+                            <div class="flex footer__soc-links">
+                                <a href="#" class="footer__soc-link footer__soc-link_whatsapp"></a>
+                                <a href="#" class="footer__soc-link footer__soc-link_telegram"></a>
+                            </div>
+                        </section>
+
+                        <section class="footer__column footer__column_mobile">
+                            <button class="footer__calculator-btn"></button>
+                        </section>
+
                     </section>
 
-                    <section class="footer__column footer__column_logo">
-                        <div class="logo logo_white">
-                            <a href="#" class="logo__link"></a>
-                        </div>
-                    </section>
-
-                    <section class="flex footer__column">
+                    <section class="flex footer__column footer__column_mobile-two">
                         <address class="footer__company-info">
                             <a href="tel:+79000000000" class="footer__phone">
                                 8 900 000 00 00
@@ -2245,10 +2300,9 @@
                         </div>
                     </section>
 
+                </div>
 
-                </section>
-
-                <section class="footer__row footer__row_bottom">
+                <section class="footer__row footer__row_bottom footer__row_bottom-desktop">
                     <p class="footer__copyright">
                         © 2023 Налоговый Эксперт. Все права защищены. <mark class="footer__copyright_marked">Дизайн и разработка сайта - New Way.</mark> 
                     </p>
@@ -2258,6 +2312,22 @@
                     </a>
                 </section>
                 
+            </div>
+
+            <div class="footer__container-wrapper footer__container-wrapper_mobile">
+                <div class="container">
+
+                    <section class="footer__row footer__row_bottom">
+                        <p class="footer__copyright">
+                            © 2023 Налоговый Эксперт. Все права защищены. <mark class="footer__copyright_marked">Дизайн и разработка сайта - New Way.</mark> 
+                        </p>
+    
+                        <a href="#" class="footer__polytic">
+                            Политика конфеденциальности
+                        </a>
+                    </section>
+
+                </div>
             </div>
         </footer>
 

@@ -59,6 +59,13 @@
         flex-wrap: nowrap;
         gap: 1.88rem;
     }
+
+    &__footer {
+        margin-top: 1.7rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .company {
