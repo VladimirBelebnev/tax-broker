@@ -42,6 +42,7 @@ calculatorToggleBtns.forEach(item => {
         const currentDropDown = clickedElement.children[1];
 
         dropDownMethods.toggleDropDown(currentDropDown, "hidden");
+        clickedElement.classList.toggle("calculator-1__input_active");
 
         event.preventDefault();
     });

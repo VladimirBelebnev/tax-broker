@@ -22,13 +22,16 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            right: -1.25rem;
         }
     }
 
     &__title {
         font-size: 2.875rem;
         margin-bottom: 1.19rem;
+    }
+
+    &__subtitle {
+        line-height: 1.25rem;
     }
 
     &__img-wrapper {

@@ -13,7 +13,7 @@
 
         &:first-child {
             justify-content: space-between;
-            margin-bottom: 2.69rem;
+            margin-bottom: 1.9rem;
         }
 
         &_bottom {
@@ -61,7 +61,8 @@
             display: none;
             justify-content: space-between !important;
             align-items: center;
-            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            gap: 0.5rem;
 
             .footer__soc-links {
                 margin-left: 0;
@@ -95,6 +96,10 @@
     &__phone {
         font-size: 1.25rem;
         font-weight: $semibold;
+
+        &_mobile {
+            font-size: 1.54113rem;
+        }
     }
 
     &__time {

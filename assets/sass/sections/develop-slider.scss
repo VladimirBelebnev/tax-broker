@@ -32,6 +32,10 @@
     &__buttons {
         justify-content: flex-start;
         gap: 0.87rem;
+
+        &_mobile {
+            display: none;
+        }
     }
 
     &__slider {

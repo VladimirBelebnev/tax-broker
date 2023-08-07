@@ -35,7 +35,12 @@
         }
 
         &__btn {
-            min-width: 100%;
+            min-width: auto;
+        }
+
+        &__links {
+            display: grid;
+            grid-template-columns: 1fr 3.1875rem 3.1875rem;
         }
 
     }
@@ -53,6 +58,10 @@
 
         &__title {
             margin-bottom: 0.3rem;
+        }
+
+        &__subtitle {
+            max-width: 10.35825rem;
         }
     }
 
@@ -230,6 +239,13 @@
         }
     }
 
+    .modal-1 {
+
+        &__img-section {
+            display: none;
+        }
+    }
+
 }
 
 // Media Querie 900px
@@ -353,6 +369,21 @@
 
         &__container-wrapper {
             display: block;
+        }
+    }
+
+    .modal-1 {
+
+        &__wrapper {
+            padding: 4rem 2rem 2rem;
+        }
+
+        &__content {
+            width: 100%;
+        }
+
+        &__form {
+            max-width: 100%;
         }
     }
 
@@ -531,17 +562,15 @@
         &__title {
             font-size: 1.5625rem;
         }
-
-        &__btn {
-            min-width: 100%;
-        }
     }
 
     .services-wrapper {
+        gap: 0.8rem;
         grid-template-rows: auto;
     }
 
     .consultate {
+        padding: 2.19rem 0 4.44rem;
 
         &__header {
             margin-bottom: 2.3rem;
@@ -584,6 +613,10 @@
             font-size: 2.25rem;
             margin-bottom: 2.5rem;
         }
+
+        &__item_address {
+            max-width: 14.4375rem;
+        }
     }
 
     .services-3 {
@@ -620,6 +653,54 @@
             &_mobile {
                 width: 100%;
             }
+        }
+    }
+
+    .calculator-1, .achivements-2 {
+
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+
+    .saving-taxes {
+
+        &__title {
+            font-size: 1.875rem;
+        }
+    }
+
+    .achivements-1 {
+
+        &__btn {
+
+            &_mobile {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .modal-1 {
+
+        &__wrapper {
+            padding: 3.12rem 1.13rem 2.5rem;
+        }
+
+        &__content {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 1.75rem;
+            margin-bottom: 0;
+        }
+
+        &__subtitle {
+            margin-top: 1rem;
+        }
+
+        &__header {
+            margin-bottom: 2rem;
         }
     }
 }
@@ -693,14 +774,21 @@
         }
     }
 
+    .service {
+        padding: 1rem;
+    }
+
 }
 
 // Media Querie 370px
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 380px) {
 
     .service {
-        padding: 1rem;
+
+        &__btn {
+            min-width: 100%;
+        }
     }
 
 }
