@@ -3,7 +3,8 @@
 let dropDownMethods = {
     
     toggleDropDown(element, cl) {
-        element.classList.toggle(cl);
+        element?.classList.toggle(cl);
+        event.preventDefault();
     }
 
 }

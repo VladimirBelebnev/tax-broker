@@ -22,16 +22,40 @@ body {
     min-height: 100vh;
     background: $white;
 
-    &_all-blocks {
+    // & > *:not(:last-child) {
+    //     margin-bottom: 0;
+    // }
 
-        & > * {
-            margin: 5rem 0 !important;
-        }
+    .home {
+        margin-bottom: 1.8rem;
+    }
 
-        .services {
-            padding: 0;
-        }
+    .achivements-1, .services {
+        margin-bottom: 6.2rem;
+    }
 
+    .consultate, .calculator-1 {
+        margin-bottom: 7.5rem;
+    }
+
+    .packets {
+        margin-bottom: 4.4rem;
+    }
+
+    .saving-taxes {
+        margin-bottom: 7.3rem;
+    }
+
+    .price {
+        margin-bottom: 3.9rem;
+    }
+
+    .register {
+        margin-bottom: 7.4rem;
+    }
+
+    .achivements-2, .additional-services {
+        margin-bottom: 6.7rem;
     }
 }
 
@@ -64,6 +88,31 @@ a:hover, button:hover {
     opacity: 0.5;
 }
 
-input[type=range] {
-    appearance: none;
+.noUi-connect {
+    background: $blue1;
+}
+
+.noUi-pips {
+    display: none;
+}
+
+.noUi-handle, .noUi-touch-area {
+    width: 1rem !important;
+    height: 1rem !important;
+    right: 0 !important;
+    border-radius: 50%;
+    border: none;
+    background: $blue1;
+
+    &::before, &::after {
+        display: none;
+    }
+}
+
+.noUi-target {
+    height: 0.5rem;
+    border-radius: 0.8125rem;
+    border: 1px solid $gray2;
+    background: $white;
+    box-shadow: none;
 }

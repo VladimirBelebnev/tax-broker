@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/js/libraries/nouislider.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Налоговый эксперт</title>
 </head>
@@ -749,7 +753,7 @@
                                         Количество ежемесячных операций
                                     </h4>
 
-                                    <input type="range" class="calculator-1__range-input">
+                                    <div class="input-range"></div>
 
                                     <div class="calculator-1__range-numbers">
                                         <p class="calculator-1__range-number">
@@ -769,7 +773,7 @@
                                         Количество ежемесячных операций
                                     </h4>
 
-                                    <input type="range" class="calculator-1__range-input">
+                                    <div class="input-range"></div>
 
                                     <div class="calculator-1__range-numbers">
                                         <p class="calculator-1__range-number">
@@ -944,7 +948,7 @@
                                     Количество ежемесячных операций
                                 </h4>
 
-                                <input type="range" class="calculator-1__range-input">
+                                <div class="input-range"></div>
 
                                 <div class="calculator-1__range-numbers">
                                     <p class="calculator-1__range-number">
@@ -964,7 +968,7 @@
                                     Количество ежемесячных операций
                                 </h4>
 
-                                <input type="range" class="calculator-1__range-input">
+                                <div class="input-range"></div>
 
                                 <div class="calculator-1__range-numbers">
                                     <p class="calculator-1__range-number">
@@ -984,7 +988,7 @@
                                     Количество ежемесячных операций
                                 </h4>
 
-                                <input type="range" class="calculator-1__range-input">
+                                <div class="input-range"></div>
 
                                 <div class="calculator-1__range-numbers">
                                     <p class="calculator-1__range-number">
@@ -1239,39 +1243,39 @@
 
                             <ul class="flex packets__button-list">
                                 <li class="packets__button-item">
-                                    <button class="packets__button packets__button_active">
+                                    <button class="packets__button packets__button_active" data-direction="zero">
                                         Нулевая отчетность
                                     </button>
                                 </li>
                                 <li class="packets__button-item">
-                                    <button class="packets__button">
+                                    <button class="packets__button" data-direction="services">
                                         Услуги
                                     </button>
                                 </li>
                                 <li class="packets__button-item">
-                                    <button class="packets__button">
+                                    <button class="packets__button" data-direction="production">
                                         Производство
                                     </button>
                                 </li>
                                 <li class="packets__button-item">
-                                    <button class="packets__button">
+                                    <button class="packets__button" data-direction="constructions">
                                         Строительство
                                     </button>
                                 </li>
                                 <li class="packets__button-item">
-                                    <button class="packets__button">
+                                    <button class="packets__button" data-direction="trade">
                                         Торговля
                                     </button>
                                 </li>
                                 <li class="packets__button-item">
-                                    <button class="packets__button">
+                                    <button class="packets__button" data-direction="marketplaces">
                                         Маркетплейсы
                                     </button>
                                 </li>
                             </ul>
                         </header>
 
-                        <section class="flex packets__items">
+                        <section class="flex packets__items" data-direction="zero">
 
                             <article class="packet">
 
@@ -1321,22 +1325,22 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
@@ -1344,7 +1348,7 @@
 
                                     <div class="packet__prices">
 
-                                        <div class="packet__price">
+                                        <div class="packet__price" data-direction="osno">
                                             <b class="packet__price-bold-text">
                                                 от 6 000 ₽
                                             </b>
@@ -1353,7 +1357,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="hidden packet__price">
+                                        <div class="hidden packet__price" data-direction="usno">
                                             <b class="packet__price-bold-text">
                                                 от 7 000 ₽
                                             </b>
@@ -1362,7 +1366,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="hidden packet__price">
+                                        <div class="hidden packet__price" data-direction="IP">
                                             <b class="packet__price-bold-text">
                                                 от 8 000 ₽
                                             </b>
@@ -1371,7 +1375,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="hidden packet__price">
+                                        <div class="hidden packet__price" data-direction="patent">
                                             <b class="packet__price-bold-text">
                                                 от 9 000 ₽
                                             </b>
@@ -1437,34 +1441,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -1499,7 +1534,7 @@
 
                         </section>
 
-                        <section class="flex hidden packets__items">
+                        <section class="flex hidden packets__items" data-direction="services">
 
                             <article class="packet">
 
@@ -1549,34 +1584,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -1634,34 +1700,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -1696,7 +1793,7 @@
 
                         </section>
 
-                        <section class="flex hidden packets__items">
+                        <section class="flex hidden packets__items" data-direction="production">
 
                             <article class="packet">
 
@@ -1746,34 +1843,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -1831,34 +1959,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -1893,7 +2052,7 @@
 
                         </section>
 
-                        <section class="flex hidden packets__items">
+                        <section class="flex hidden packets__items" data-direction="constructions">
 
                             <article class="packet">
 
@@ -1943,34 +2102,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -2028,34 +2218,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -2090,7 +2311,7 @@
 
                         </section>
 
-                        <section class="flex hidden packets__items">
+                        <section class="flex hidden packets__items" data-direction="trade">
 
                             <article class="packet">
 
@@ -2140,34 +2361,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -2225,34 +2477,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -2287,7 +2570,7 @@
 
                         </section>
 
-                        <section class="flex hidden packets__items">
+                        <section class="flex hidden packets__items" data-direction="marketplaces">
 
                             <article class="packet">
 
@@ -2337,34 +2620,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -2422,41 +2736,72 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                     <a href="#" class="packet__btn">
                                         Заказать
                                     </a>
                                 </section>
-
+                                
                             </article>
 
                             <form action="#" method="POST" class="none packets__form">
@@ -2502,39 +2847,6 @@
                             <h2 class="title-1 packets__title">
                                 Готовые пакеты
                             </h2>
-
-                            <ul class="flex packets__button-list">
-                                <li class="packets__button-item">
-                                    <button class="packets__button packets__button_active">
-                                        Нулевая отчетность
-                                    </button>
-                                </li>
-                                <li class="packets__button-item">
-                                    <button class="packets__button">
-                                        Услуги
-                                    </button>
-                                </li>
-                                <li class="packets__button-item">
-                                    <button class="packets__button">
-                                        Производство
-                                    </button>
-                                </li>
-                                <li class="packets__button-item">
-                                    <button class="packets__button">
-                                        Строительство
-                                    </button>
-                                </li>
-                                <li class="packets__button-item">
-                                    <button class="packets__button">
-                                        Торговля
-                                    </button>
-                                </li>
-                                <li class="packets__button-item">
-                                    <button class="packets__button">
-                                        Маркетплейсы
-                                    </button>
-                                </li>
-                            </ul>
                         </header>
 
                         <section class="flex packets__items">
@@ -2587,22 +2899,22 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
@@ -2610,7 +2922,7 @@
 
                                     <div class="packet__prices">
 
-                                        <div class="packet__price">
+                                        <div class="packet__price" data-direction="osno">
                                             <b class="packet__price-bold-text">
                                                 от 6 000 ₽
                                             </b>
@@ -2619,7 +2931,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="hidden packet__price">
+                                        <div class="hidden packet__price" data-direction="usno">
                                             <b class="packet__price-bold-text">
                                                 от 7 000 ₽
                                             </b>
@@ -2628,7 +2940,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="hidden packet__price">
+                                        <div class="hidden packet__price" data-direction="IP">
                                             <b class="packet__price-bold-text">
                                                 от 8 000 ₽
                                             </b>
@@ -2637,7 +2949,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="hidden packet__price">
+                                        <div class="hidden packet__price" data-direction="patent">
                                             <b class="packet__price-bold-text">
                                                 от 9 000 ₽
                                             </b>
@@ -2703,1019 +3015,65 @@
                                 <section class="packet__column">
                                     <ul class="packet__button-list">
                                         <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
+                                            <button class="packet__button packet__button_active" data-direction="osno">
                                                 ОСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="usno">
                                                 УСНО
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="IP">
                                                 ИП
                                             </button>
                                         </li>
                                         <li class="packet__button-item">
-                                            <button class="packet__button">
+                                            <button class="packet__button" data-direction="patent">
                                                 Патент
                                             </button>
                                         </li>
                                     </ul>
 
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
+                                    <div class="packet__prices">
+
+                                        <div class="packet__price" data-direction="osno">
+                                            <b class="packet__price-bold-text">
+                                                от 6 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="usno">
+                                            <b class="packet__price-bold-text">
+                                                от 7 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="IP">
+                                            <b class="packet__price-bold-text">
+                                                от 8 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
+
+                                        <div class="hidden packet__price" data-direction="patent">
+                                            <b class="packet__price-bold-text">
+                                                от 9 000 ₽
+                                            </b>
+                                            <p class="packet__price-text">
+                                                календарный месяц
+                                            </p>
+                                        </div>
 
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <form action="#" method="POST" class="none packets__form">
-                                <h3 class="packets__form-title">
-                                    Узнайте больше
-                                </h3>
-
-                                <div class="flex packets__form-row">
-                                    <input type="text" placeholder="Ваше имя" class="packets__input">
-                                    <input type="text" placeholder="Номер телефона" class="packets__input">
-                                </div>
-
-                                <div class="packets__form-row">
-                                    <button type="submit" class="packets__submit-btn">
-                                        Отправить заявку
-                                    </button>
-
-                                    <p class="packets__polytic-text">
-                                        Нажимая Отправить заявку вы принимаете
-                                        <a href="#" class="packets__polytic-text_link">условия политики приватности</a>
-                                    </p>
-                                </div>
-                                
-                            </form>
-
-                        </section>
-
-                        <section class="flex hidden packets__items">
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ2»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ3»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <form action="#" method="POST" class="none packets__form">
-                                <h3 class="packets__form-title">
-                                    Узнайте больше
-                                </h3>
-
-                                <div class="flex packets__form-row">
-                                    <input type="text" placeholder="Ваше имя" class="packets__input">
-                                    <input type="text" placeholder="Номер телефона" class="packets__input">
-                                </div>
-
-                                <div class="packets__form-row">
-                                    <button type="submit" class="packets__submit-btn">
-                                        Отправить заявку
-                                    </button>
-
-                                    <p class="packets__polytic-text">
-                                        Нажимая Отправить заявку вы принимаете
-                                        <a href="#" class="packets__polytic-text_link">условия политики приватности</a>
-                                    </p>
-                                </div>
-                                
-                            </form>
-
-                        </section>
-
-                        <section class="flex hidden packets__items">
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ4»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ5»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <form action="#" method="POST" class="none packets__form">
-                                <h3 class="packets__form-title">
-                                    Узнайте больше
-                                </h3>
-
-                                <div class="flex packets__form-row">
-                                    <input type="text" placeholder="Ваше имя" class="packets__input">
-                                    <input type="text" placeholder="Номер телефона" class="packets__input">
-                                </div>
-
-                                <div class="packets__form-row">
-                                    <button type="submit" class="packets__submit-btn">
-                                        Отправить заявку
-                                    </button>
-
-                                    <p class="packets__polytic-text">
-                                        Нажимая Отправить заявку вы принимаете
-                                        <a href="#" class="packets__polytic-text_link">условия политики приватности</a>
-                                    </p>
-                                </div>
-                                
-                            </form>
-
-                        </section>
-
-                        <section class="flex hidden packets__items">
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ6»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ7»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <form action="#" method="POST" class="none packets__form">
-                                <h3 class="packets__form-title">
-                                    Узнайте больше
-                                </h3>
-
-                                <div class="flex packets__form-row">
-                                    <input type="text" placeholder="Ваше имя" class="packets__input">
-                                    <input type="text" placeholder="Номер телефона" class="packets__input">
-                                </div>
-
-                                <div class="packets__form-row">
-                                    <button type="submit" class="packets__submit-btn">
-                                        Отправить заявку
-                                    </button>
-
-                                    <p class="packets__polytic-text">
-                                        Нажимая Отправить заявку вы принимаете
-                                        <a href="#" class="packets__polytic-text_link">условия политики приватности</a>
-                                    </p>
-                                </div>
-                                
-                            </form>
-
-                        </section>
-
-                        <section class="flex hidden packets__items">
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <form action="#" method="POST" class="none packets__form">
-                                <h3 class="packets__form-title">
-                                    Узнайте больше
-                                </h3>
-
-                                <div class="flex hidden packets__form-row">
-                                    <input type="text" placeholder="Ваше имя" class="packets__input">
-                                    <input type="text" placeholder="Номер телефона" class="packets__input">
-                                </div>
-
-                                <div class="packets__form-row">
-                                    <button type="submit" class="packets__submit-btn">
-                                        Отправить заявку
-                                    </button>
-
-                                    <p class="packets__polytic-text">
-                                        Нажимая Отправить заявку вы принимаете
-                                        <a href="#" class="packets__polytic-text_link">условия политики приватности</a>
-                                    </p>
-                                </div>
-                                
-                            </form>
-
-                        </section>
-
-                        <section class="flex hidden packets__items">
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
-                                    </div>
-
-                                    <a href="#" class="packet__btn">
-                                        Заказать
-                                    </a>
-                                </section>
-
-                            </article>
-
-                            <article class="packet">
-
-                                <section class="packet__column">
-                                    <h3 class="packet__title">
-                                        Тариф «СТАНДАРТ»
-                                    </h3>
-                                    <ul class="packet__info-items">
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение первичной документации
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Ведение клиент-банка
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Расчет з/п , начисление налогов с ФОТ, начисление отпускных, пособий по временной нетрудоспособности 
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Составление и выдача справок 2-НДФЛ сотрудникам
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению расчетов с поставщиками и покупателями
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Услуги по ведению налогового учета
-                                            </p>
-                                        </li>
-                                        <li class="packet__info-item">
-                                            <p class="packet__info-text">
-                                                Сдача отчетности в налоговый орган/внебюджетные фонды
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </section>
-
-                                <section class="packet__column">
-                                    <ul class="packet__button-list">
-                                        <li class="packet__button-item">
-                                            <button class="packet__button packet__button_active">
-                                                ОСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                УСНО
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                ИП
-                                            </button>
-                                        </li>
-                                        <li class="packet__button-item">
-                                            <button class="packet__button">
-                                                Патент
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="packet__price">
-                                        <b class="packet__price-bold-text">
-                                            от 6 000 ₽
-                                        </b>
-                                        <p class="packet__price-text">
-                                            календарный месяц
-                                        </p>
                                     </div>
 
                                     <a href="#" class="packet__btn">
@@ -3757,9 +3115,22 @@
                                     Регистрация ООО
                                 </h4>
 
-                                <p class="packets__additional-price">
-                                    0 руб
-                                </p>
+                                <div class="packets__additional-right-wrapper">
+                                    <div class="packets__additional-info-btn-wrapper">
+                                        <button class="packets__additional-info-btn"></button>
+
+                                        <div class="pop-up hidden packets__pop-up">
+                                            <p class="pop-up__text">
+                                                Камеральную проверку проводят после сдачи любого налогового отчета. Если в декларации обнаружены нарушения, налоговый орган составляет акт. Наша команда предлагает услуги по пересмотру решения налогового органа по итогам камеральной проверки.<br>
+                                                <mark class="pop-up__text_marked">Стоимость услуги: 5% от начисленной суммы.</mark>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="packets__additional-price">
+                                        0 руб
+                                    </p>
+                                </div>
                             </div>
 
                             <div class="packets__additional-item">
@@ -4810,6 +4181,337 @@
             </div>
 
             <!-- Header Modal End -->
+
+            <!-- Modal 1 -->
+
+            <div class="modal-1 hidden">
+                <div class="container modal-1__container">
+                    <div class="modal-1__wrapper modal-1__wrapper_register">
+
+                        <button class="modal-1__skip-btn"></button>
+
+                        <header class="modal-1__header modal-1__header_register">
+                            <h2 class="title-1 modal-1__title modal-1__title_register">
+                                Что нужно для регистрации юридического лица
+                            </h2>
+                        </header>
+
+                        <section class="modal-1__content modal-1__content_register">
+
+                            <p class="modal-1__text">
+                                <mark class="modal-1__text_marked">Шаг №1.</mark> Формирование пакета документов Первым делом необходимо подготовить определенный набор документов. Список документов зависит от числа учредителей. Если учредитель один, то следует подготовить:
+                                • Заявление для регистрации (форма Р11001) • Письменное решение о создании предприятия • Устав (необходимо заранее составить) • Квитанция об оплате государственной пошлины.
+                            </p>
+
+                            <p class="modal-1__text">
+                                <mark class="modal-1__text_marked">Шаг №1.</mark> Формирование пакета документов Первым делом необходимо подготовить определенный набор документов. Список документов зависит от числа учредителей. Если учредитель один, то следует подготовить:
+                                • Заявление для регистрации (форма Р11001) • Письменное решение о создании предприятия • Устав (необходимо заранее составить) • Квитанция об оплате государственной пошлины.
+                            </p>
+
+                            <p class="modal-1__text">
+                                <mark class="modal-1__text_marked">Шаг №1.</mark> Формирование пакета документов Первым делом необходимо подготовить определенный набор документов. Список документов зависит от числа учредителей. Если учредитель один, то следует подготовить:
+                                • Заявление для регистрации (форма Р11001) • Письменное решение о создании предприятия • Устав (необходимо заранее составить) • Квитанция об оплате государственной пошлины.
+                            </p>
+
+                            <p class="modal-1__text">
+                                <mark class="modal-1__text_marked">Шаг №1.</mark> Формирование пакета документов Первым делом необходимо подготовить определенный набор документов. Список документов зависит от числа учредителей. Если учредитель один, то следует подготовить:
+                                • Заявление для регистрации (форма Р11001) • Письменное решение о создании предприятия • Устав (необходимо заранее составить) • Квитанция об оплате государственной пошлины.
+                            </p>
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 1 End -->
+
+            <!-- Modal 1 -->
+
+            <div class="modal-1 modal-1_first hidden">
+                <div class="container modal-1__container">
+                    <div class="modal-1__wrapper">
+
+                        <button class="modal-1__skip-btn"></button>
+
+                        <header class="modal-1__header">
+                            <h2 class="title-1 modal-1__title">
+                                Рассчитайте стоимость сопровождения онлайн
+                            </h2>
+                        </header>
+
+                        <section class="modal-1__content">
+
+                            <section class="calculator-1 calculator-2 modal-1__calculator">
+                
+                                    <section class="grid calculator-1__content calculator-2__content calculator-2__content_two-columns">
+                
+                                        <section class="calculator-2__column">
+                
+                                            <section class="calculator-1__input-section">
+                                                <h4 class="calculator-1__input-title">
+                                                    Форма собственности
+                                                </h4>
+                
+                                                <div class="calculator-1__input">
+                                                    <p class="calculator-1__input-text">
+                                                        ИП
+                                                    </p>
+                                                </div>
+                                            </section>
+                
+                                            <section class="calculator-1__input-section">
+                                                <h4 class="calculator-1__input-title">
+                                                    Форма налогооблажения
+                                                </h4>
+                
+                                                <div class="calculator-1__input">
+                                                    <p class="calculator-1__input-text">
+                                                        УСН 6%
+                                                    </p>
+                                                </div>
+                                            </section>
+                
+                                            <section class="calculator-1__input-section">
+                                                <h4 class="calculator-1__input-title">
+                                                    Вид бизнеса
+                                                </h4>
+                
+                                                <div class="calculator-1__input">
+                                                    <p class="calculator-1__input-text">
+                                                        Услуги
+                                                    </p>
+                                                </div>
+                                            </section>
+                
+                                        </section>
+                
+                                        <section class="calculator-2__column">
+                
+                                            <section class="calculator-1__range-section">
+                
+                                                <h4 class="calculator-1__range-title">
+                                                    Количество ежемесячных операций
+                                                </h4>
+                
+                                                <div class="input-range"></div>
+                
+                                                <div class="calculator-1__range-numbers">
+                                                    <p class="calculator-1__range-number">
+                                                        <\10
+                                                    </p>
+                
+                                                    <p class="calculator-1__range-number">
+                                                        100+
+                                                    </p>
+                                                </div>
+                                                
+                                            </section>
+                
+                                            <section class="calculator-1__range-section">
+                
+                                                <h4 class="calculator-1__range-title">
+                                                    Количество ежемесячных операций
+                                                </h4>
+                
+                                                <div class="input-range"></div>
+                
+                                                <div class="calculator-1__range-numbers">
+                                                    <p class="calculator-1__range-number">
+                                                        <\10
+                                                    </p>
+                
+                                                    <p class="calculator-1__range-number">
+                                                        100+
+                                                    </p>
+                                                </div>
+                                                
+                                            </section>
+                
+                                            <section class="calculator-1__range-section">
+                
+                                                <h4 class="calculator-1__range-title">
+                                                    Количество ежемесячных операций
+                                                </h4>
+                
+                                                <div class="input-range"></div>
+                
+                                                <div class="calculator-1__range-numbers">
+                                                    <p class="calculator-1__range-number">
+                                                        <\10
+                                                    </p>
+                
+                                                    <p class="calculator-1__range-number">
+                                                        100+
+                                                    </p>
+                                                </div>
+                                                
+                                            </section>
+                
+                                        </section>
+                
+                                    </section>
+
+                            </section>
+                
+                            <!-- Calculator-2 End -->
+
+                        </section>
+
+                        <footer class="modal-1__footer">
+                            <button class="modal-1__btn">
+                                Далее
+                            </button>
+                        </footer>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 1 End -->
+
+            <!-- Modal 1 -->
+
+            <div class="modal-1 modal-1_second hidden">
+                <div class="container modal-1__container">
+                    <div class="modal-1__wrapper">
+
+                        <button class="modal-1__skip-btn"></button>
+
+                        <header class="modal-1__header">
+                            <h2 class="title-1 modal-1__title">
+                                Рассчитайте стоимость сопровождения онлайн
+                            </h2>
+
+                            <p class="modal-1__subtitle">
+                                Получите расчет и узнайте подробности от нашего специалиста, оставьте свой номер и мы свяжемся с вами в самое ближайшее время
+                            </p>
+                        </header>
+
+                        <section class="modal-1__content">
+
+                            <form action="#" method="POST" class="modal-1__form">
+
+                                <input type="text" class="modal-1__input" placeholder="Ваше имя">
+                                <input type="text" class="modal-1__input" placeholder="Номер телефона">
+
+                                <button type="submit" class="modal-1__submit-btn">
+                                    Отправить заявку
+                                </button>
+
+                                <p class="modal-1__polytic-text">
+                                    Нажимая Отправить заявку вы принимаете
+                                    <a href="#" class="modal-1__polytic-text_link">условия политики приватности</a>
+                                </p>
+
+                            </form>
+
+                        </section>
+
+                        <footer class="modal-1__footer">
+                            <button class="modal-1__btn modal-1__btn_white">
+                                Назад
+                            </button>
+                        </footer>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 1 End -->
+
+            <!-- Modal 1 -->
+
+            <div class="modal-1 modal-1_third hidden">
+                <div class="container modal-1__container">
+                    <div class="modal-1__wrapper modal-1__wrapper_mini">
+
+                        <button class="modal-1__skip-btn"></button>
+
+                        <header class="modal-1__header">
+                            <h2 class="title-1 modal-1__title modal-1__title_mini">
+                                Рассчитайте стоимость сопровождения онлайн
+                            </h2>
+
+                            <p class="modal-1__subtitle modal-1__subtitle_mini">
+                                Получите расчет и узнайте подробности от нашего специалиста, оставьте свой номер и мы свяжемся с вами в самое ближайшее время
+                            </p>
+                        </header>
+
+                        <section class="modal-1__content">
+
+                            <form action="#" method="POST" class="modal-1__form">
+
+                                <input type="text" class="modal-1__input" placeholder="Ваше имя">
+                                <input type="text" class="modal-1__input" placeholder="Номер телефона">
+
+                                <button type="submit" class="modal-1__submit-btn">
+                                    Отправить заявку
+                                </button>
+
+                                <p class="modal-1__polytic-text">
+                                    Нажимая Отправить заявку вы принимаете
+                                    <a href="#" class="modal-1__polytic-text_link">условия политики приватности</a>
+                                </p>
+
+                            </form>
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 1 End -->
+
+            <!-- Modal 1 -->
+
+            <div class="modal-1 modal-1_fourth hidden">
+                <div class="container modal-1__container modal-1__container_img">
+
+                    <div class="modal-1__img-section">
+                        <img src="assets/images/modal-1-img.png" alt="" class="modal-1__img">
+                    </div>
+
+                    <div class="modal-1__wrapper modal-1__wrapper_mini">
+
+                        <button class="modal-1__skip-btn"></button>
+
+                            <header class="modal-1__header">
+                                <h2 class="title-1 modal-1__title modal-1__title_mini">
+                                    Рассчитайте стоимость сопровождения онлайн
+                                </h2>
+
+                                <p class="modal-1__subtitle modal-1__subtitle_mini">
+                                    Получите расчет и узнайте подробности от нашего специалиста, оставьте свой номер и мы свяжемся с вами в самое ближайшее время
+                                </p>
+                            </header>
+
+                            <section class="modal-1__content">
+
+                                <form action="#" method="POST" class="modal-1__form">
+
+                                    <input type="text" class="modal-1__input" placeholder="Ваше имя">
+                                    <input type="text" class="modal-1__input" placeholder="Номер телефона">
+
+                                    <button type="submit" class="modal-1__submit-btn">
+                                        Отправить заявку
+                                    </button>
+
+                                    <p class="modal-1__polytic-text">
+                                        Нажимая Отправить заявку вы принимаете
+                                        <a href="#" class="modal-1__polytic-text_link">условия политики приватности</a>
+                                    </p>
+
+                                </form>
+
+                            </section>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 1 End -->
             
         </section>
 
@@ -4947,8 +4649,9 @@
 
     </div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="assets/js/libraries/nouislider.min.js"></script>
 <script src="assets/js/index.js" type="module"></script>
-<script src="assets/js/slider.js" type="module"></script>
+<script src="assets/js/slider.js"></script>
 </body>
 </html>

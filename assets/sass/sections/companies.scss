@@ -2,7 +2,6 @@
 
 .companies {
     width: 100%;
-    margin: 7.31rem 0 3.12rem;
 
     &__header {
         justify-content: space-between;
@@ -49,16 +48,16 @@
         }
     }
 
-    &__slider {
-        display: flex;
-        overflow: hidden;
-    }
+    // &__slider {
+    //     display: flex;
+    //     overflow: hidden;
+    // }
 
-    &__slider-wrapper {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 1.88rem;
-    }
+    // &__slider-wrapper {
+    //     display: flex;
+    //     flex-wrap: nowrap;
+    //     gap: 1.88rem;
+    // }
 
     &__footer {
         margin-top: 1.7rem;

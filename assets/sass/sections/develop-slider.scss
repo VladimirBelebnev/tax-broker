@@ -2,6 +2,7 @@
 
 .develop-slider {
     width: 100%;
+    margin-bottom: 6.9rem;
 
     &__container {
         grid-template-columns: repeat(2, 1fr);
@@ -38,18 +39,18 @@
         }
     }
 
-    &__slider {
-        max-width: 35rem;
-        display: flex;
-        justify-content: flex-start;
-        overflow: hidden;
-    }
+    // &__slider {
+    //     max-width: 35rem;
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     overflow: hidden;
+    // }
 
-    &__slider-wrapper {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 1.88rem;
-    }
+    // &__slider-wrapper {
+    //     display: flex;
+    //     flex-wrap: nowrap;
+    //     gap: 1.88rem;
+    // }
 
     &__slider-btn {
         width: 3.6875rem;

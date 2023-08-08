@@ -8,11 +8,17 @@ let tabsMethods = {
     },
 
     tabToggle(buttons, tabs, cl) {
-        const btnNumber = Array.from(buttons).findIndex(item => item == event.currentTarget);
+        const btnAttribute = event.currentTarget.getAttribute("data-direction");
         this.tabClear(tabs, buttons, cl);
 
-        tabs[btnNumber].classList.remove("hidden");
+        tabs.forEach(item => {
+            if (item.getAttribute("data-direction") == btnAttribute) {
+                item.classList.remove("hidden");
+            }
+        });
         this.setActiveBtn(event.currentTarget, cl);
+
+        event.preventDefault();
     },
 
     setActiveBtn(btn, cl) {
